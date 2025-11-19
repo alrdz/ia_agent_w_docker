@@ -1,0 +1,10 @@
+services: #dockers compose expecteds
+  app: #cusrome kname
+    # image: python:3.12-slim-trixie
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - 8000:8000
+      - 3000:8000
+    command: python -m http.server 8000
